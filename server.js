@@ -15,6 +15,7 @@ app.use(express.static('public'));
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
+console.log("GROQ_API_KEY loaded:", process.env.GROQ_API_KEY ? "YES" : "NO");
 
 // Public feed
 const publicFeed = [
@@ -82,4 +83,5 @@ Make it 3–5 sentences. Natural. Ready to copy.
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
+
 });
